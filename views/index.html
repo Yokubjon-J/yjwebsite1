@@ -138,14 +138,14 @@
                 <input class="input-field" type='email' name="email"> -->
                 <label>Message</label>
                 <textarea class="input-field" name="message" id="text"></textarea>
-                <input id="submit-btn" type="submit" value="Send!" onclick="e.preventDefault()">
+                <input id="submit-btn" type="submit" value="Send!">
             </form>
         </div>
     </section>
     <script type="text/javascript" src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-      $("form").on("submit", e => {
+      $("contact-form").on("submit", e => {
         e.preventDefault();
 
         const email = 'ezenxaanmeiji@gmail.com';

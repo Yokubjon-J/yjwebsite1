@@ -34,9 +34,9 @@ function setTheme(mode){
 	localStorage.setItem('theme', mode)
 }
 
-let form = document.getElementById('contact-form');
-form.addEventListener('submit', function(){
-	if (document.getElementById("i1").value && document.getElementById("i2").value && document.getElementById("text").value) {
-        document.getElementById("Button").disabled = false;
-    }
-})
+// let form = document.getElementById('contact-form');
+// form.addEventListener('submit', function(){
+// 	if (document.getElementById("i1").value && document.getElementById("i2").value && document.getElementById("text").value) {
+//         document.getElementById("Button").disabled = false;
+//     }
+// })

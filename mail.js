@@ -1,7 +1,8 @@
 const nodemailer = require('nodemailer');
 const mailGun = require('nodemailer-mailgun-transport');
-require('dotenv').config();
+// require('dotenv').config();
 const privateApi = process.env.API_KEY_MAILGUN;
+console.log(process.env.API_KEY_MAILGUN, privateApi)
 
 const auth = {
     auth: {
@@ -11,7 +12,6 @@ const auth = {
 };
 
 const transporter = nodemailer.createTransport(mailGun(auth));
-
 
 const sendMail = (email, subject, text, cb) => {
     const mailOptions = {
