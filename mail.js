@@ -13,10 +13,11 @@ const auth = {
 
 const transporter = nodemailer.createTransport(mailGun(auth));
 
-const sendMail = (email, subject, text, cb) => {
+const sendMail = (email, name, subject, text, cb) => {
     const mailOptions = {
         from: email, // TODO replace this with your own email
         to: 'ezenxaanmeiji@gmail.com', // TODO: the receiver email has to be authorized for the free tier
+        name,
         subject,
         text
     };

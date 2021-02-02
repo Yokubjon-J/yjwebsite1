@@ -131,11 +131,11 @@
             <h3 style="text-align: center;">Message me!</h3>
             <form id='contact-form'>
                 <label>Email</label>
-                <input id="i1" class="input-field" type='text' name="name">
+                <input id="i1" class="input-field" type='email' name="name" required>
+                <label>Name</label>
+                <input class="input-field" type='text' name="email" id="name" required>
                 <label>Subject</label>
-                <input  id="i2" class="input-field" type='text' name="subject" >
-                <!-- <label>Email</label>
-                <input class="input-field" type='email' name="email"> -->
+                <input  id="i2" class="input-field" type='text' name="subject" required>
                 <label>Message</label>
                 <textarea class="input-field" name="message" id="text"></textarea>
                 <input id="submit-btn" type="submit" value="Send!">
@@ -149,11 +149,13 @@
         e.preventDefault();
 
         const email = $("#i1").val().trim();
+        const name = $("#name").val().trim();
         const subject = $("#i2").val().trim();
         const text = $("#text").val().trim();
 
         const data = {
           email,
+          name,
           subject,
           text
         };
@@ -163,7 +165,11 @@
             console.log(data);
             console.log(status);
             console.log(xhr)
-        })
+        });
+        $("#i1").val('');
+        $("#name").val('');
+        $("#i2").val('');
+        $("#text").val('');
       });
     </script>  
 </body>

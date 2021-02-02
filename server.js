@@ -18,10 +18,10 @@ app.use(express.json());
 app.use("/", express.static(__dirname + '/views'));
 
 app.post('/email', (req, res) => {
-    const {email, subject, text } = req.body;
+    const {email, name, subject, text } = req.body;
     console.log('Data: ', req.body);
 
-    sendMail(email, subject, text, function(err, data) {
+    sendMail(email, name, subject, text, function(err, data) {
         if (err) {
             console.log('ERROR: ', err);
             return res.status(500).json({ message: err.message || 'Internal Error' });
