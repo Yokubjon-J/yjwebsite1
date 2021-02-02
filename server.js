@@ -18,7 +18,7 @@ app.use(express.json());
 app.use("/", express.static(__dirname + '/views'));
 
 app.post('/email', (req, res) => {
-    const { subject, email, text } = req.body;
+    const {email, subject, text } = req.body;
     console.log('Data: ', req.body);
 
     sendMail(email, subject, text, function(err, data) {
